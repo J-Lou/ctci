@@ -9,7 +9,6 @@ package com.company;
  * Unicode is a superset of ASCII. Unicode is any set of characters less than 2^21
  */
 public class IsUnique {
-
     /*
      * Solution proposed by CTCI
      */
@@ -32,14 +31,13 @@ public class IsUnique {
         return true;
     }
 
-
     /*
      * Solution is O(n) with a space complexity of O(1)
      */
     public static boolean isUnique(String string) {
         // Assuming extended ASCII
         int[] characterSet = new int[256];
-        for(int i = 0; i < string.length(); i++) {
+        for (int i = 0; i < string.length(); i++) {
             int charValue =  string.charAt(i);
             if (characterSet[charValue] > 0) {
                 return false;
